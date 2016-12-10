@@ -1,0 +1,177 @@
+/* шрифты */
+/* шрифты */
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('fonts/Montserrat-Regular.otf');
+  font-weight: normal;
+  font-style: normal;/* src: url('fonts/Lora.eot'); */
+  /* url('fonts/Lora.otf') format('opentype'),
+  		 url('fonts/Lora.woff') format('woff'); */
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('fonts/Montserrat-Light.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('fonts/Montserrat-Bold.otf');
+  font-weight: bold;
+}
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+body header {
+  width: 100%;
+  height: 70vh;
+  min-width: 1024px;
+  min-height: 720px;
+  max-height: 1280px;
+}
+body header .top {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+body header .top .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  cursor: default;
+}
+body header .top nav a {
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+  transition: .3s ease;
+}
+body header .top nav a:hover {
+  color: #5595bd;
+}
+body header .slogan {
+  display: block;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+}
+body header .slogan p {
+  text-align: center;
+  margin: 0;
+}
+body header .slogan p:first-child {
+  margin-top: 10vh;
+}
+body header .slogan p:nth-child(2) {
+  color: #5595bd;
+}
+body header .slogan p:nth-child(3) {
+  font-weight: normal;
+  font-size: 12px;
+  color: #5c5c5c;
+}
+body header .button {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  width: 200px;
+  display: inherit;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: #ffc74a;
+  transition: .3s;
+}
+body header .button:hover {
+  background-color: white;
+}
+body .places-wrap {
+  position: relative;
+  margin-top: -185px;
+  display: flex;
+  flex-diretion: row;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+body .places-wrap .places {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 15%;
+  max-width: 370px;
+  width: 370px;
+  height: 370px;
+  background-color: #5595bd;
+}
+body .places-wrap .places .black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: .35s;
+}
+body .places-wrap .places:hover .black {
+  opacity: 0;
+}
+body .places-wrap .places:hover img {
+  opacity: 1;
+  transform: translatey(-50px);
+}
+body .places-wrap .places:hover .name {
+  transform: translatey(-50px);
+}
+body .places-wrap .places img {
+  position: relative;
+  display: block;
+  opacity: 0.6;
+  transition: opacity .35s, transform .35s;
+}
+body .places-wrap .places figcaption {
+  color: white;
+}
+body .places-wrap .places figcaption .name {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: opacity .35s, transform .35s;
+}
+body .places-wrap .places figcaption .name .figname {
+  padding: 0 30px;
+  margin: 0;
+  position: relative;
+}
+body .places-wrap .places figcaption .name h1,
+body .places-wrap .places figcaption .name p {
+  padding: 0 30px;
+  margin: 0;
+  position: relative;
+}
+body .places-wrap .places figcaption .name h1 {
+  position: absolute;
+  bottom: 30px;
+}
+body .places-wrap .places figcaption .name p {
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body .places-wrap .places figcaption a {
+  opacity: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  bottom: -30px;
+}
