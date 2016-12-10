@@ -141,7 +141,7 @@ body .places-wrap .places figcaption .name {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: opacity .35s, transform .35s;
+  transition: .3s;
 }
 body .places-wrap .places figcaption .name .figname {
   padding: 0 30px;
@@ -157,6 +157,7 @@ body .places-wrap .places figcaption .name p {
 body .places-wrap .places figcaption .name h1 {
   position: absolute;
   bottom: 30px;
+  transition: bottom .15s;
 }
 body .places-wrap .places figcaption .name p {
   font-weight: 300;
@@ -174,4 +175,5 @@ body .places-wrap .places figcaption a {
   color: white;
   position: absolute;
   bottom: -30px;
+  transition: opacity .35s, bottom .35s;
 }
