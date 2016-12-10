@@ -104,9 +104,9 @@ body .places-wrap .places {
   position: relative;
   overflow: hidden;
   margin: 0;
-  width: 15%;
+  min-width: 220px;
   max-width: 370px;
-  width: 370px;
+  width: 20vw;
   height: 370px;
   background-color: #5595bd;
 }
