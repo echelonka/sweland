@@ -1,5 +1,5 @@
 $(function(){
-	$('.places').hover(
+	$('.popular').hover(
 		function(){
 			$(this).find('p').css('opacity', '1');
 			$(this).find('h1').css('bottom', '100%');

@@ -11,26 +11,28 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url('fonts/Montserrat-Light.otf');
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url('fonts/Montserrat-Bold.otf');
   font-weight: bold;
 }
+/* colors */
 body {
   font-family: 'Montserrat';
   margin: 0;
+  background-color: #fdfdfe;
 }
 body header {
   width: 100%;
-  height: 70vh;
-  min-width: 1024px;
-  min-height: 720px;
+  height: 60vh;
+  min-width: 640px;
+  min-height: 700px;
   max-height: 1280px;
 }
 body header .top {
-  padding: 60px 40px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -43,10 +45,13 @@ body header .top .logo {
   cursor: default;
 }
 body header .top nav a {
-  padding-right: 20px;
+  margin-right: 20px;
   text-decoration: none;
   color: white;
   transition: .3s ease;
+}
+body header .top nav a:last-child {
+  margin-right: 0;
 }
 body header .top nav a:hover {
   color: #5595bd;
@@ -62,7 +67,7 @@ body header .slogan p {
   margin: 0;
 }
 body header .slogan p:first-child {
-  margin-top: 10vh;
+  margin-top: 50px;
 }
 body header .slogan p:nth-child(2) {
   color: #5595bd;
@@ -91,82 +96,92 @@ body header .button {
 body header .button:hover {
   background-color: white;
 }
-body .places-wrap {
+body .pop-wrap {
   position: relative;
   margin-top: -185px;
+  /* sorry */
+
   display: flex;
   flex-diretion: row;
   justify-content: space-around;
-  align-content: space-around;
+  align-content: space-between;
   flex-wrap: wrap;
 }
-body .places-wrap .places {
+body .pop-wrap::before {
+  content: "Popular places to discover";
+  color: white;
+  position: absolute;
+  top: -40px;
+  font-weight: 400;
+}
+body .pop-wrap .popular {
   position: relative;
   overflow: hidden;
   margin: 0;
-  min-width: 220px;
+  margin-bottom: 20px;
+  min-width: 240px;
   max-width: 370px;
   width: 20vw;
   height: 370px;
   background-color: #5595bd;
 }
-body .places-wrap .places .black {
+body .pop-wrap .popular .black {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: black;
   transition: .35s;
 }
-body .places-wrap .places:hover .black {
+body .pop-wrap .popular:hover .black {
   opacity: 0;
 }
-body .places-wrap .places:hover img {
+body .pop-wrap .popular:hover img {
   opacity: 1;
   transform: translatey(-50px);
 }
-body .places-wrap .places:hover .name {
+body .pop-wrap .popular:hover .name {
   transform: translatey(-50px);
 }
-body .places-wrap .places img {
+body .pop-wrap .popular img {
   position: relative;
   display: block;
   opacity: 0.6;
   transition: opacity .35s, transform .35s;
 }
-body .places-wrap .places figcaption {
+body .pop-wrap .popular figcaption {
   color: white;
 }
-body .places-wrap .places figcaption .name {
+body .pop-wrap .popular figcaption .name {
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: .3s;
+  transition: .35s;
 }
-body .places-wrap .places figcaption .name .figname {
-  padding: 0 30px;
+body .pop-wrap .popular figcaption .name .figname {
+  padding: 0 20px;
   margin: 0;
   position: relative;
 }
-body .places-wrap .places figcaption .name h1,
-body .places-wrap .places figcaption .name p {
-  padding: 0 30px;
+body .pop-wrap .popular figcaption .name h1,
+body .pop-wrap .popular figcaption .name p {
+  padding: 0 20px;
   margin: 0;
   position: relative;
 }
-body .places-wrap .places figcaption .name h1 {
+body .pop-wrap .popular figcaption .name h1 {
   position: absolute;
   bottom: 30px;
   transition: bottom .15s;
 }
-body .places-wrap .places figcaption .name p {
+body .pop-wrap .popular figcaption .name p {
   font-weight: 300;
   padding-top: 10px;
   padding-bottom: 10px;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
-body .places-wrap .places figcaption a {
+body .pop-wrap .popular figcaption a {
   opacity: 0;
   width: 100%;
   padding: 15px 30px;
@@ -175,5 +190,132 @@ body .places-wrap .places figcaption a {
   color: white;
   position: absolute;
   bottom: -30px;
-  transition: opacity .35s, bottom .35s;
+  transition: opacity .3s, bottom .35s;
+}
+body .places {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+body .places .search-wrap {
+  margin-bottom: 50px;
+}
+body .places .search-wrap h1 {
+  text-align: center;
+  color: #5c5c5c;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+body .places .search-wrap .search {
+  width: 40%;
+  min-width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+body .places .search-wrap .search input {
+  border: none;
+}
+body .places .search-wrap .search input[type="search"] {
+  -webkit-appearance: none;
+}
+body .places .search-wrap .search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: url('img/deletecross.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50%;
+  opacity: .5;
+  margin-right: 5px;
+  transition: opacity .3s;
+}
+body .places .search-wrap .search input[type="search"]::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+body .places .search-wrap .search input.input {
+  width: 100%;
+  padding: 15px 45px 16px 25px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 5px 55px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: #5c5c5c;
+  outline: none;
+}
+body .places .search-wrap .search .submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+  background-image: url('img/search.svg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 50%;
+  /* i dunno why it's grey without that */
+
+  background-color: rgba(0, 0, 0, 0);
+}
+body .cities-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+body .cities-grid figure {
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 30%;
+  min-width: 380px;
+  max-width: 450px;
+  height: 350px;
+  box-shadow: 0 5px 55px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+body .cities-grid figure img {
+  display: block;
+  border-radius: 5px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+body .cities-grid figure figcaption {
+  margin-top: 30px;
+}
+body .cities-grid figure figcaption h2 {
+  color: #5c5c5c;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+body .cities-grid figure figcaption h3 {
+  color: #aab0b9;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+}
+body .cities-grid figure figcaption a {
+  display: block;
+  width: 150px;
+  margin: 30px auto;
+  padding: 10px 0;
+  box-shadow: 0 5px 55px rgba(0, 0, 0, 0.1);
+  color: #aab0b9;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 50px;
+  transition: .35s;
+}
+body .cities-grid figure figcaption a:hover {
+  color: black;
+  background-color: #ffc74a;
+  box-shadow: none;
 }
