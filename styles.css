@@ -221,7 +221,7 @@ body .places .search-wrap h1 {
 }
 body .places .search-wrap .search {
   width: 40%;
-  min-width: 200px;
+  min-width: 250px;
   margin: 0 auto;
   position: relative;
 }
@@ -422,11 +422,15 @@ body .explore .about-city .city-wrap a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  body .cities-grid figure {
+  body .places .cities-grid figure {
     min-width: 100vw;
+    height: 310px;
   }
-  body .cities-grid figure img {
-    width: 100%;
+  body .places .cities-grid figure img {
+    width: 90%;
+  }
+  body .places .cities-grid figure figcaption {
+    margin-top: 15px;
   }
   body .explore {
     padding: 10px 0;
@@ -434,9 +438,6 @@ body .explore .about-city .city-wrap a:hover {
   }
   body .explore .city-name {
     transform: rotate(-90deg) translatey(110px);
-  }
-  body .explore h1 {
-    margin-bottom: 20px;
   }
   body .explore .about-city .city-wrap {
     width: 100%;
