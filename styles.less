@@ -33,6 +33,8 @@ body{
 	font-family: @mainfont;
 	margin: 0;
 	background-color: #fdfdfe;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 	header{
 		width: 100%;
 		height: 60vh;
@@ -107,6 +109,7 @@ body{
 			}
 		}
 	}
+	/* end of header */
 	.pop-wrap{
 		position: relative;
 		margin-top: -185px;
@@ -178,6 +181,7 @@ body{
 						.figname;
 					}
 					h1{
+						font-size: 2em;
 						position: absolute;
 						bottom: 30px;
 						transition: bottom .15s;
@@ -204,6 +208,7 @@ body{
 			}
 		}
 	}
+	/* end of .pop-wrap */
 	.places{
 		width: 80%;
 		margin: 0 auto;
@@ -271,6 +276,7 @@ body{
 			}
 		}
 	}
+	/* end of .places */
 	.cities-grid{
 		display: flex;
 		flex-direction: row;
@@ -330,5 +336,74 @@ body{
 			}
 		}
 	}
-
+	/* end of .cities-grid */
+	.explore{
+		background-color: #f8f9fb;
+		overflow: hidden;
+		position: relative;
+		padding: 50px;
+		.city-name{
+			cursor: default;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: right;
+			position: absolute;
+			right: -150px;
+			top: 25%;
+			color: white;
+			transform: rotate(-90deg);
+			span{
+				line-height: .8em;
+				text-shadow: 0 5px 55px rgba(0,0,0,.1);
+				font-size: 180px;
+				letter-spacing: -5pt;
+				&:last-child{
+					letter-spacing: 5pt;
+				}
+			}
+		}
+		h1{
+			font-size: 1.5em;
+			text-align: center;
+			color: @grey;
+			margin-top: 0;
+			margin-bottom: 35px;
+		}
+		.about-city{
+			position: relative;
+			z-index: 1;
+			width: 80%;
+			margin: 0 auto;
+			.city-wrap{
+				width: 50%;
+				min-width: 350px;
+				h2{
+					color: @darkyellow;
+					font-size: 2em;
+				}
+				p{
+					color: @grey;
+					line-height: 1.5;
+				}
+				a{
+					font-size: 12px;
+					display: block;
+					width: 150px;
+					text-align: center;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					border-radius: 20px;
+					font-weight: bold;
+					text-decoration: none;
+					color: black;
+					background-color: @darkyellow;
+					transition: .3s;
+					&:hover{
+						background-color: white;
+					}
+				}
+			}
+			
+		}
+	}
 }

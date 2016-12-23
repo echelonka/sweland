@@ -23,6 +23,16 @@ body {
   font-family: 'Montserrat';
   margin: 0;
   background-color: #fdfdfe;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  /* end of header */
+
+  /* end of .pop-wrap */
+
+  /* end of .places */
+
+  /* end of .cities-grid */
+
 }
 body header {
   width: 100%;
@@ -170,6 +180,7 @@ body .pop-wrap .popular figcaption .name p {
   position: relative;
 }
 body .pop-wrap .popular figcaption .name h1 {
+  font-size: 2em;
   position: absolute;
   bottom: 30px;
   transition: bottom .15s;
@@ -318,4 +329,72 @@ body .cities-grid figure figcaption a:hover {
   color: black;
   background-color: #ffc74a;
   box-shadow: none;
+}
+body .explore {
+  background-color: #f8f9fb;
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+}
+body .explore .city-name {
+  cursor: default;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: right;
+  position: absolute;
+  right: -150px;
+  top: 25%;
+  color: white;
+  transform: rotate(-90deg);
+}
+body .explore .city-name span {
+  line-height: .8em;
+  text-shadow: 0 5px 55px rgba(0, 0, 0, 0.1);
+  font-size: 180px;
+  letter-spacing: -5pt;
+}
+body .explore .city-name span:last-child {
+  letter-spacing: 5pt;
+}
+body .explore h1 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #5c5c5c;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+body .explore .about-city {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+body .explore .about-city .city-wrap {
+  width: 50%;
+  min-width: 350px;
+}
+body .explore .about-city .city-wrap h2 {
+  color: #ffc74a;
+  font-size: 2em;
+}
+body .explore .about-city .city-wrap p {
+  color: #5c5c5c;
+  line-height: 1.5;
+}
+body .explore .about-city .city-wrap a {
+  font-size: 12px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: #ffc74a;
+  transition: .3s;
+}
+body .explore .about-city .city-wrap a:hover {
+  background-color: white;
 }
