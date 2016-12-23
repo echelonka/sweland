@@ -404,7 +404,7 @@ body .explore .about-city .city-wrap a:hover {
 }
 @media (max-width: 450px) {
   body header {
-    min-width: 350px;
+    min-width: 100%;
   }
   body header .top {
     flex-direction: column;
@@ -418,6 +418,14 @@ body .explore .about-city .city-wrap a:hover {
     margin-top: 5px;
   }
   body .pop-wrap .popular {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .cities-grid figure {
+    min-width: 100vw;
+  }
+  body .cities-grid figure img {
     width: 100%;
   }
   body .explore {

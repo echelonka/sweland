@@ -411,7 +411,7 @@ body{
 
 	@media (max-width: 450px){
 		header{
-			min-width: 350px;
+			min-width: 100%;
 			.top{
 				flex-direction: column;
 				align-items: center;
@@ -427,6 +427,16 @@ body{
 		.pop-wrap{
 			.popular{
 				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.cities-grid{
+			figure{
+				min-width: 100vw;
+				img{
+					width: 100%;
+				}
 			}
 		}
 		.explore{
