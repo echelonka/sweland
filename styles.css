@@ -20,6 +20,7 @@
 }
 /* colors */
 body {
+  touch-action: manipulation;
   font-family: 'Montserrat';
   margin: 0;
   background-color: #fdfdfe;
