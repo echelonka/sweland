@@ -30,7 +30,6 @@
 @lightgrey: #aab0b9;
 
 body{
-	touch-action: manipulation;
 	font-family: @mainfont;
 	margin: 0;
 	background-color: #fdfdfe;
@@ -118,7 +117,6 @@ body{
 	.pop-wrap{
 		position: relative;
 		margin-top: -185px;
-		/* sorry */
 		display: flex;
 		display: -webkit-box;
 		display: -moz-box;
@@ -142,7 +140,7 @@ body{
 			margin-bottom: 20px;
 			min-width: 240px;
 			max-width: 370px;
-			width: 20vw;
+			width: 24vw;
 			height: 370px;
 			background-color: @blue;
 			.black{
@@ -448,6 +446,7 @@ body{
 			}
 		}
 	}
+/* end general styles */
 
 	@media (max-width: 550px){
 		header{
@@ -456,27 +455,15 @@ body{
 				flex-direction: column;
 				align-items: center;
 				padding: 10px 10px;
-				.logo{
-					font-size: 24px;
-				}
-				nav{
-					margin-top: 5px;
-					a{
-						margin-right: 10px;
-						&:last-child{
-							margin-right: 0;
-						}
-					}
-				}
 			}
 			.slogan{
-				font-size: 56px;
 				p:first-child{
 					margin-top: 60px;
 				}
 			}
 		}
 		.pop-wrap{
+
 			.popular{
 				width: 100%;
 				margin-left: auto;
@@ -488,7 +475,9 @@ body{
 				figure{
 					max-width: 100vw;
 					min-width: 90vw;
-					height: 310px;
+					height: 20%;
+					min-height: 250px; 
+					max-height: 350px;
 					img{
 						width: 90%;
 					}
@@ -545,6 +534,7 @@ body{
 			}
 		}
 		.pop-wrap{
+			margin-top: -100px;
 			.popular{
 				width: 100%;
 				min-width: 275px;

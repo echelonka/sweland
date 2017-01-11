@@ -20,7 +20,6 @@
 }
 /* colors */
 body {
-  touch-action: manipulation;
   font-family: 'Montserrat';
   margin: 0;
   background-color: #fdfdfe;
@@ -33,6 +32,8 @@ body {
   /* end of .places */
 
   /* end of .cities-grid */
+
+  /* end general styles */
 
   /* end of media 550px*/
 
@@ -118,8 +119,6 @@ body header .button:active {
 body .pop-wrap {
   position: relative;
   margin-top: -185px;
-  /* sorry */
-
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -144,7 +143,7 @@ body .pop-wrap .popular {
   margin-bottom: 20px;
   min-width: 240px;
   max-width: 370px;
-  width: 20vw;
+  width: 24vw;
   height: 370px;
   background-color: #5595bd;
 }
@@ -455,21 +454,6 @@ body footer a:active {
     align-items: center;
     padding: 10px 10px;
   }
-  body header .top .logo {
-    font-size: 24px;
-  }
-  body header .top nav {
-    margin-top: 5px;
-  }
-  body header .top nav a {
-    margin-right: 10px;
-  }
-  body header .top nav a:last-child {
-    margin-right: 0;
-  }
-  body header .slogan {
-    font-size: 56px;
-  }
   body header .slogan p:first-child {
     margin-top: 60px;
   }
@@ -481,7 +465,9 @@ body footer a:active {
   body .places .cities-grid figure {
     max-width: 100vw;
     min-width: 90vw;
-    height: 310px;
+    height: 20%;
+    min-height: 250px;
+    max-height: 350px;
   }
   body .places .cities-grid figure img {
     width: 90%;
@@ -528,6 +514,9 @@ body footer a:active {
   }
   body header .top nav a:last-child {
     margin-right: 0;
+  }
+  body .pop-wrap {
+    margin-top: -100px;
   }
   body .pop-wrap .popular {
     width: 100%;
