@@ -463,6 +463,7 @@ body footer a:active {
     margin-right: auto;
   }
   body .places .cities-grid {
+    flex-direction: column;
     width: 100%;
     max-width: 450px;
   }
